@@ -11,7 +11,7 @@ map <A-Down> <C-w>j
 
 "utils
 map <F2> :NERDTreeToggle<CR>
-map <F3> :buffers<CR> :buffer<Space>
+map <F3> :buffers<CR>:buffer<Space>
 map <F4> :sh<CR>
 
 "surround
