@@ -1,0 +1,208 @@
+#root
+snippet strict
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+snippet trans
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+snippet html
+	<html>
+		${1}
+	</html>
+snippet head
+	<head>
+		${1}
+	</head>
+snippet js
+	<script type="text/javascript">
+		${1}
+	</script>
+snippet jss
+	<script type="text/javascript" src="${1}" />
+snippet css
+	<style type="text/css">
+		${1}
+	</style>
+snippet csss
+	<link rel="stylesheet" type="text/css" href="${1}" />
+snippet rss
+	<link rel="alternate" type="application/rss+xml" title="${1}" href="" />
+snippet title
+	<title>${1}</title>
+snippet utf
+	<meta http-equiv="Content-Type" content="text/html; charset="UTF-8" />
+snippet body
+	<body>
+		${1}
+	</body>
+
+# table
+snippet table
+	<table>
+		<tr>
+			<th>${1}</th>
+		</tr>
+		<tr>
+			<td>${2}</td>
+		</tr>
+	</table>
+snippet td
+	<td>${1}</td>
+snippet tr
+	<tr>${1}</tr>
+snippet th
+	<th>${1}</th>
+snippet caption
+	<caption>${1}</caption>
+
+# form
+snippet form
+	<form action="${1}" method="${2}">
+		${3}
+		<input type="submit" value="Submit" />
+	</form>
+snippet label
+	<label for="${1}">${2}</label>
+snippet input
+	<input type="text" name="${1}" value="" id="" />
+snippet pass
+	<input type="password" name="${1}" id="" />
+snippet textarea
+	<textarea name="${1}" cols="50" rows="10" id="" >	</textarea>
+snippet select
+	<select name="${1}" id="">
+		<option value="${2}">${3}</option>
+	</select>
+snippet radio
+	<input type="radio" name="${1}" value
+	"" />
+snippet check
+	<input type="checkbox" name="${1}" value
+	"" />
+snippet submit
+	<input type="submit" value
+	"${1}" />
+
+# lists
+snippet ul
+	<ul class
+	"${1}">
+	<li>	</li>
+	</ul>
+snippet ol
+	<ol class
+	"${1}">
+	<li>	</li>
+	</ol>
+snippet li
+	<li>${1}	</li>
+
+# inline
+snippet span
+	<span class
+	"${1}">	</span>
+snippet em
+	<em>${1}	</em>
+snippet cite
+	<cite>${1}	</cite>
+snippet strong
+	<strong>${1}	</strong>
+snippet img
+	<img src="${1}" alt
+	"" />
+snippet anch
+	<a name
+	"${1}">	</a>
+snippet a
+	<a href
+	"${1}">	</a>
+snippet thumb
+	<a href="${1}"><img src
+	"" />	</a>
+
+# block
+snippet div
+	<div class
+	"${1}">	</div>
+snippet divi
+	<div id
+	"${1}">	</div>
+snippet h1
+	<h1>${1}	</h1>
+snippet h2
+	<h2>${1}	</h2>
+snippet h3
+	<h3>${1}	</h3>
+snippet h4
+	<h4>${1}	</h4>
+snippet h5
+	<h5>${1}	</h5>
+snippet h6
+	<h6>${1}	</h6>
+snippet p
+	<p>${1}	</p>
+snippet pre
+	<pre>
+${1}
+	</pre>
+snippet code
+	<code>
+${1}
+	</code>
+snippet quote
+	<blockquote>
+	<p>
+		${1}
+		</p>
+	</blockquote>
+
+# other
+snippet br
+	<br/>
+snippet hr
+	<hr/>
+snippet 1s
+	&nbsp;
+snippet 3s
+	&nbsp;&nbsp;&nbsp;
+snippet 7s
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+# erb snippets
+snippet pp
+	<% ${1} %>
+snippet pe
+	<%
+	 ${1} %>
+snippet slt
+	<%
+	 stylesheet_link_tag ${1} %>
+snippet jit
+	<%
+	 javascript_include_tag ${1} %>
+snippet ff
+	<%
+	 form_for @${1} do |f| %>
+<% end %>
+snippet ft
+	<%= form_tag '${1}', :method 
+	> :post do -%>
+<% end -%>
+
+# helpers
+snippet st
+	<%
+	 submit_tag '${1}' %>
+snippet lt
+	<%
+	 link_to '${1}' %>
+snippet lta
+	<%= link_to '${1}', :action 
+	> "action" %>
+snippet ltca
+	<%= link_to '${1}', :controller => "controller", :action 
+	> "action" %>
+snippet ltcai
+	<%= link_to '${1}', :controller => "controller", :action => "action", :id 
+	> @item %>
+snippet rp
+	<%
+	 render "${1}" %>
