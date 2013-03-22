@@ -3,6 +3,8 @@ syntax on
 filetype plugin on
 set mouse=a
 set ai
+set ts=2
+set sw=2
 
 "window movement
 map <A-Left> <C-w>h
