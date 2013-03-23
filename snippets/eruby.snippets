@@ -4,3 +4,30 @@ snippet pp
 snippet pe
 	<%= ${1} %>
 
+#form helpers	
+snippet ff
+	<% form_for @${1} do |f| %>
+		${2}
+	<% end %>
+snippet lt
+	<% link_to '${1}' %>
+snippet lta
+	<%= link_to '${1}', :action=> "${2}" %>
+snippet ltca
+	<%= link_to '${1}', :controller => "${2}", :action=> "${3}" %>
+snippet ltcai
+	<%= link_to '${1}', :controller => "${2}", :action=> "${3}" :id=> ${4:@item} %>
+
+snippet slt
+	<% stylesheet_link_tag ${1} %>
+snippet jit
+	<% javascript_include_tag ${1} %>
+snippet ft
+	<%= form_tag '${1}', :method => ${2:post} do -%>
+	<% end -%>
+
+# helpers
+snippet st
+	<% submit_tag '${1}' %>
+snippet rp
+	<% render "${1}" %>

@@ -68,97 +68,83 @@ snippet pass
 snippet textarea
 	<textarea name="${1}" cols="50" rows="10" id="" >	</textarea>
 snippet select
-	<select name="${1}" id="">
+	<select name="${1}">
 		<option value="${2}">${3}</option>
 	</select>
 snippet radio
-	<input type="radio" name="${1}" value
-	"" />
+	<input type="radio" name="${1}" value="" />
 snippet check
-	<input type="checkbox" name="${1}" value
-	"" />
+	<input type="checkbox" name="${1}" value="" />
 snippet submit
-	<input type="submit" value
-	"${1}" />
+	<input type="submit" value="${1}" />
 
 # lists
 snippet ul
-	<ul class
-	"${1}">
-	<li>	</li>
+	<ul class="${1}">
+		<li>${2}</li>
 	</ul>
 snippet ol
-	<ol class
-	"${1}">
-	<li>	</li>
+	<ol class="${1}">
+		<li>${2}</li>
 	</ol>
 snippet li
-	<li>${1}	</li>
+	<li>${1}</li>
 
 # inline
 snippet span
-	<span class
-	"${1}">	</span>
+	<span class="${1}">${2}</span>
 snippet em
-	<em>${1}	</em>
+	<em>${1}</em>
 snippet cite
-	<cite>${1}	</cite>
+	<cite>${1}</cite>
 snippet strong
-	<strong>${1}	</strong>
+	<strong>${1}</strong>
 snippet img
-	<img src="${1}" alt
-	"" />
+	<img src="${1}" />
 snippet anch
-	<a name
-	"${1}">	</a>
+	<a name="${1}">	</a>
 snippet a
-	<a href
-	"${1}">	</a>
+	<a href="${1}">	</a>
 snippet thumb
-	<a href="${1}"><img src
-	"" />	</a>
+	<a href="${1}"><img src="" /></a>
 
 # block
 snippet div
-	<div class
-	"${1}">	</div>
+	<div class="${1}">${2}</div>
 snippet divi
-	<div id
-	"${1}">	</div>
+	<div id="${1}">${2}</div>
 snippet h1
-	<h1>${1}	</h1>
+	<h1>${1}</h1>
 snippet h2
-	<h2>${1}	</h2>
+	<h2>${1}</h2>
 snippet h3
-	<h3>${1}	</h3>
+	<h3>${1}</h3>
 snippet h4
-	<h4>${1}	</h4>
+	<h4>${1}</h4>
 snippet h5
-	<h5>${1}	</h5>
+	<h5>${1}</h5>
 snippet h6
-	<h6>${1}	</h6>
+	<h6>${1}</h6>
 snippet p
-	<p>${1}	</p>
+	<p>${1}</p>
 snippet pre
-	<pre>
-${1}
-	</pre>
+	<pre>${1}</pre>
 snippet code
 	<code>
-${1}
+		${1}
 	</code>
 snippet quote
 	<blockquote>
-	<p>
-		${1}
+		<p>
+			${1}
 		</p>
 	</blockquote>
 
 # other
 snippet br
-	<br/>
+	<br />
 snippet hr
-	<hr/>
+	<hr />
 snippet 1s
 	&nbsp;
 snippet 3s
@@ -166,43 +152,4 @@ snippet 3s
 snippet 7s
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-# erb snippets
-snippet pp
-	<% ${1} %>
-snippet pe
-	<%
-	 ${1} %>
-snippet slt
-	<%
-	 stylesheet_link_tag ${1} %>
-snippet jit
-	<%
-	 javascript_include_tag ${1} %>
-snippet ff
-	<%
-	 form_for @${1} do |f| %>
-<% end %>
-snippet ft
-	<%= form_tag '${1}', :method 
-	> :post do -%>
-<% end -%>
 
-# helpers
-snippet st
-	<%
-	 submit_tag '${1}' %>
-snippet lt
-	<%
-	 link_to '${1}' %>
-snippet lta
-	<%= link_to '${1}', :action 
-	> "action" %>
-snippet ltca
-	<%= link_to '${1}', :controller => "controller", :action 
-	> "action" %>
-snippet ltcai
-	<%= link_to '${1}', :controller => "controller", :action => "action", :id 
-	> @item %>
-snippet rp
-	<%
-	 render "${1}" %>
