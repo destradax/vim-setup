@@ -2,9 +2,10 @@
 syntax on
 filetype plugin on
 set mouse=a
-set ai
-set ts=2
-set sw=2
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set noswapfile
 
 "window movement
 map <A-Left> <C-w>h
@@ -24,3 +25,9 @@ vmap ( <Esc>`<i(<Esc>`>a)<Esc>
 vmap { <Esc>`<i{<Esc>`>a}<Esc>
 vmap [ <Esc>`<i[<Esc>`>a]<Esc>
 
+"edition
+inoremap ' ''<Left>
+inoremap " ""<Left>
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
