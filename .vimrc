@@ -12,6 +12,10 @@ map <A-Left> <C-w>h
 map <A-Right> <C-w>l
 map <A-Up> <C-w>k
 map <A-Down> <C-w>j
+imap <A-Left> <C-w>h
+imap <A-Right> <C-w>l
+imap <A-Up> <C-w>k
+imap <A-Down> <C-w>j
 
 "utils
 map <F2> :NERDTreeToggle<CR>
