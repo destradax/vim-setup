@@ -35,3 +35,7 @@ inoremap " ""<Left>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
+
+"easy comments"
+noremap <C-c><C-c> :s/^/<C-R>=strpart(&commentstring, 0, 1)<CR> /g<CR>
+noremap <C-c><C-e> :s/^<C-R>=strpart(&commentstring, 0, 1)<CR> //g<CR>
