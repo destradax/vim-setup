@@ -22,6 +22,10 @@ noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :buffers<CR>:buffer<Space>
 noremap <F4> :sh<CR>
 
+" easy find and open file (use <Tab> to cycle)
+noremap <C-c><C-f> :e **/
+inoremap <Esc><C-c><C-f> :e **/
+
 " surround
 vnoremap ' <Esc>`<i'<Esc>`>a'<Esc>
 vnoremap " <Esc>`<i"<Esc>`>a"<Esc>
