@@ -8,19 +8,19 @@ set shiftwidth=2
 set noswapfile
 
 " window movement
-map <A-Left> <C-w>h
-map <A-Right> <C-w>l
-map <A-Up> <C-w>k
-map <A-Down> <C-w>j
-imap <A-Left> <Esc><C-w>h
-imap <A-Right> <Esc><C-w>l
-imap <A-Up> <Esc><C-w>k
-imap <A-Down> <Esc><C-w>j
+noremap <A-Left> <C-w>h
+noremap <A-Right> <C-w>l
+noremap <A-Up> <C-w>k
+noremap <A-Down> <C-w>j
+inoremap <A-Left> <Esc><C-w>h
+inoremap <A-Right> <Esc><C-w>l
+inoremap <A-Up> <Esc><C-w>k
+inoremap <A-Down> <Esc><C-w>j
 
 " utils
-map <F2> :NERDTreeToggle<CR>
-map <F3> :buffers<CR>:buffer<Space>
-map <F4> :sh<CR>
+noremap <F2> :NERDTreeToggle<CR>
+noremap <F3> :buffers<CR>:buffer<Space>
+noremap <F4> :sh<CR>
 
 " surround
 vnoremap ' <Esc>`<i'<Esc>`>a'<Esc>
