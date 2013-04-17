@@ -26,14 +26,14 @@ endfunction
 " comments current line or selection
 function s:Comment()
 	if exists("b:commentstr")
-		silent execute 's/^/' . escape(b:commentstr, '/') . ' /g'
+		silent execute 's/^\(\s*\)/\1' . escape(b:commentstr, '/') . ' /g'
 	endif
 endfunction
 
 " uncomments current line or selection
 function s:Uncomment()
 	if exists("b:commentstr")
-		silent! execute 's/^' . escape(b:commentstr, '/') . ' //g'
+		silent! execute 's/^\(\s*\)' . escape(b:commentstr, '/') . ' /\1/g'
 	endif
 endfunction
 
