@@ -48,10 +48,6 @@ snippet when
 	when ${1:condition}
 		${2}
 
-snippet def
-	def ${1:method_name}
-		${2}
-	end
 
 # classes
 snippet class class .. end
@@ -65,7 +61,14 @@ snippet class class .. initialize .. end
 		end
 		${4}
 	end
-
+snippet def
+	def ${1:method_name}
+		${2}
+	end
+snippet defs
+	def self.${1:method_name}
+		${2}
+	end
 snippet mod module .. end
 	module ${1}
 		${2}
@@ -130,11 +133,90 @@ snippet asnm
 snippet fl
 	flunk("${1:Failure message.}")${2}
 
-
 # rails
+
+# filters
+snippet bf
+	before_filter :${1}
+snippet af
+	after_filter :${1}
+
+# redirections
+snippet rep
+	redirect_to ${1}_path
+snippet rea
+	redirect_to :action => "${1}"
+snippet reai
+	redirect_to :action => "${1}", :id => ${2:@item}
+snippet rec
+	redirect_to :controller => "${1}"
+snippet reca
+	redirect_to :controller => "${1}", :action => "${2:index}"
+snippet recai
+	redirect_to :controller => "${1}", :action => "${2:show}", :id => ${3:@item}
+
+# rendering
+snippet ra
+	render :action => "${1}"
+snippet ral
+	render :action => "${1}", :layout => "${2:standard}"
+snippet ri
+	render :inline => "${1}"
+snippet rn
+	render :nothing => true
+snippet rns
+	render :nothing => true, :status => ${1}
+snippet rp
+	render :partial => "${1}"
+snippet rt
+	render :text => ${1}
+
+# models
+snippet att
+	attr_accessible :${1}
+
+# associations
+snippet bt
+	belongs_to ${1}
+snippet ho
+	has_one ${1}
+snippet hm
+	has_many ${1}
+snippet hbm
+	has_and_belongs_to_many ${1}
+
+# finders
+snippet fi
+	find(${1})
+snippet fib
+	find_by_${1}()
+
+# validations
+snippet v
+	validates :${1}
+snippet va
+	validates_associated ${1}, :on => :${2:create}
+snippet vac
+	validates_acceptance_of ${1}, :on => :${2:create}
+snippet vc
+	validates_confirmation_of ${1}, :on => :${2:create}, :message => "should match confirmation!"
+snippet ve
+	validates_exclusion_of ${1}, :in => %w( ${2:mov avi} ), :on => :${3:create}, :message => "extension %s is not allowed"
+snippet vf
+	validates_format_of ${1}, :with => /${2}/, :on => :${3:create}, :message => "is invalid!"
+snippet vi
+	validates_inclusion_of ${1}, :in => %w( ${2:mov avi} ), :on => :${3:create}, :message => "extension %s is not included in the list"
+snippet vl
+	validates_length_of ${1}, :within => ${2:1..100}, :on => :${3:create}, :message => "must be present!"
+snippet vn
+	validates_numericality_of ${1}, :on => :${2:create}, :message => "is not a number"
+snippet vp
+	validates_presence_of ${1}, :on => :${2:create}, :message => "can't be blank!"
+snippet vu
+	validates_uniqueness_of ${1}, :on => :${2:create}, :message => "must be unique"
+
+# test
 snippet test
 	test "${1}" do
 		${2}
 	end
-snippet hm
-	has_many ${1}
