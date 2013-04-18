@@ -16,6 +16,7 @@ function s:CommenterInit()
 		\ 'sh': '#',
 		\ 'ruby': '#',
 		\ 'perl': '#',
+		\ 'snippet': '#',
 		\ 'vim': '\"'
 		\ }
 	if has_key(s:commenter_map, &filetype)
