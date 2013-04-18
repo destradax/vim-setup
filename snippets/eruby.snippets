@@ -1,33 +1,50 @@
-#enclosing pairs
+# enclosing pairs
 snippet pp
 	<% ${1} %>
 snippet pe
 	<%= ${1} %>
 
-#form helpers	
-snippet ff
-	<% form_for @${1} do |f| %>
-		${2}
-	<% end %>
-snippet lt
-	<% link_to '${1}' %>
-snippet lta
-	<%= link_to '${1}', :action=> "${2}" %>
-snippet ltca
-	<%= link_to '${1}', :controller => "${2}", :action=> "${3}" %>
-snippet ltcai
-	<%= link_to '${1}', :controller => "${2}", :action=> "${3}" :id=> ${4:@item} %>
-
+# header
 snippet slt
 	<% stylesheet_link_tag ${1} %>
 snippet jit
 	<% javascript_include_tag ${1} %>
+
+# form helpers	
+snippet ff
+	<% form_for @${1} do |f| %>
+		${2}
+	<% end %>
+
+# form tag helpers
 snippet ft
 	<%= form_tag '${1}', :method => ${2:post} do -%>
+		${3}
 	<% end -%>
+snippet bt
+	button_tag "${1}"
+snippet cbt
+	check_box_tag '${1:id}', '${2:name}'
+snippet rbt
+	radio_button_tag '${1:id}', '${2:name}'
+snippet st
+	submit_tag "${1:value}"
+snippet tat
+	text_area_tag '${1:id}', ${2:value}
+snippet tft
+	text_field_tag '${1:id}', '${2:value}'
+
+# url helpers
+snippet lt
+	link_to '${1}'
+snippet lta
+	link_to '${1}', :action=> "${2}"
+snippet ltca
+	link_to '${1}', :controller => "${2}", :action=> "${3}"
+snippet ltcai
+	link_to '${1}', :controller => "${2}", :action=> "${3}" :id=> ${4:@item}
+
 
 # helpers
-snippet st
-	<% submit_tag '${1}' %>
 snippet rp
 	<% render "${1}" %>
