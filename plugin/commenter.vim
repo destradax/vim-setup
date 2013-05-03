@@ -13,11 +13,13 @@ function s:CommenterInit()
 	let s:commenter_map = {
 		\ 'c': '//',
 		\ 'java': '//',
-		\ 'sh': '#',
-		\ 'ruby': '#',
+		\ 'lex': '//',
 		\ 'perl': '#',
+		\ 'ruby': '#',
+		\ 'sh': '#',
 		\ 'snippet': '#',
-		\ 'vim': '\"'
+		\ 'vim': '\"',
+		\ 'yacc': '//'
 		\ }
 	if has_key(s:commenter_map, &filetype)
 		let b:commentstr = s:commenter_map[&filetype]
