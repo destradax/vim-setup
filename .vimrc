@@ -39,3 +39,8 @@ inoremap " ""<Left>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
+
+" reload .vimrc automatically
+if has("autocmd")
+	autocmd BufWritePost .vimrc source $MYVIMRC
+endif
