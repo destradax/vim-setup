@@ -18,7 +18,9 @@ inoremap <A-Up> <Esc><C-w>k
 inoremap <A-Down> <Esc><C-w>j
 
 " utils
-noremap <F2> :NERDTreeToggle<CR>
+if has("NERDTreeToggle")
+	noremap <F2> :NERDTreeToggle<CR>
+endif
 noremap <F3> :buffers<CR>:buffer<Space>
 noremap <F4> :sh<CR>
 
