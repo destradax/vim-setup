@@ -6,6 +6,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set noswapfile
+set number
 
 " window movement
 noremap <A-Left> <C-w>h
@@ -18,9 +19,7 @@ inoremap <A-Up> <Esc><C-w>k
 inoremap <A-Down> <Esc><C-w>j
 
 " utils
-if has("NERDTreeToggle")
-	noremap <F2> :NERDTreeToggle<CR>
-endif
+noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :buffers<CR>:buffer<Space>
 noremap <F4> :sh<CR>
 
@@ -46,3 +45,10 @@ inoremap [ []<Left>
 if has("autocmd")
 	autocmd BufWritePost .vimrc source $MYVIMRC
 endif
+
+" easy mappings
+let mapleader=","
+" Open new file in vertical split
+nmap <leader>o :Vexplore<CR> 
+" Open new file in horizontal split
+nmap <leader>h :Hexplore<CR> 
