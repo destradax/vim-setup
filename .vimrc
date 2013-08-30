@@ -7,6 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set noswapfile
 set number
+set nowrap
 
 " window movement
 noremap <A-Left> <C-w>h
