@@ -1,13 +1,23 @@
+if has("gui_running")
+	language messages en 
+	set guifont=Consolas:h9:cANSI
+	set langmenu=en_US.UTF-8
+endif
+
 " options
 syntax on
 filetype plugin on
+set enc=utf-8
 set mouse=a
 set autoindent
 set tabstop=2
 set shiftwidth=2
+set bs=2
 set noswapfile
 set number
 set nowrap
+set ignorecase
+set incsearch
 
 " window movement
 noremap <A-Left> <C-w>h
@@ -44,6 +54,7 @@ inoremap [ []<Left>
 
 " reload .vimrc automatically
 if has("autocmd")
+	autocmd BufNewFile,BufRead *.md set ft=markdown
 	autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 
@@ -53,3 +64,6 @@ let mapleader=","
 nmap <leader>o :Vexplore<CR> 
 " Open new file in horizontal split
 nmap <leader>h :Hexplore<CR> 
+" Edit and source .vimrc
+nmap <leader>ev :edit $MYVIMRC<CR>
+nmap <leader>sv :source $MYVIMRC<CR>
