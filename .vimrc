@@ -46,16 +46,15 @@ vnoremap { <Esc>`<i{<Esc>`>a}<Esc>
 vnoremap [ <Esc>`<i[<Esc>`>a]<Esc>
 
 " edition
-inoremap ' ''<Left>
-inoremap " ""<Left>
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
 
 " reload .vimrc automatically
 if has("autocmd")
 	autocmd BufNewFile,BufRead *.md set ft=markdown
-	autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 
 " easy mappings
