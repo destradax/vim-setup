@@ -16,7 +16,7 @@ set bs=2
 set noswapfile
 set number
 set nowrap
-set ignorecase
+set smartcase
 set incsearch
 
 " window movement
@@ -55,6 +55,7 @@ inoremap [ []<esc>i
 " reload .vimrc automatically
 if has("autocmd")
 	autocmd BufNewFile,BufRead *.md set ft=markdown
+	autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
 endif
 
 " easy mappings
