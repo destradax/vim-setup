@@ -20,14 +20,14 @@ set ignorecase
 set incsearch
 
 " window movement
-noremap <A-Left> <C-w>h
-noremap <A-Right> <C-w>l
-noremap <A-Up> <C-w>k
-noremap <A-Down> <C-w>j
-inoremap <A-Left> <Esc><C-w>h
-inoremap <A-Right> <Esc><C-w>l
-inoremap <A-Up> <Esc><C-w>k
-inoremap <A-Down> <Esc><C-w>j
+noremap <C-Left> <C-w>h
+noremap <C-Right> <C-w>l
+noremap <C-Up> <C-w>k
+noremap <C-Down> <C-w>j
+inoremap <C-Left> <Esc><C-w>h
+inoremap <C-Right> <Esc><C-w>l
+inoremap <C-Up> <Esc><C-w>k
+inoremap <C-Down> <Esc><C-w>j
 
 " utils
 noremap <F2> :NERDTreeToggle<CR>
@@ -36,7 +36,7 @@ noremap <F4> :sh<CR>
 
 " easy find and open file (use <Tab> to cycle)
 noremap <C-c><C-f> :e **/
-inoremap <Esc><C-c><C-f> :e **/
+inoremap <C-c><C-f> <Esc>:e **/
 
 " surround
 vnoremap ' <Esc>`<i'<Esc>`>a'<Esc>
