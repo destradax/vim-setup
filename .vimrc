@@ -20,14 +20,14 @@ set ignorecase
 set incsearch
 
 " window movement
-noremap <C-Left> <C-w>h
-noremap <C-Right> <C-w>l
-noremap <C-Up> <C-w>k
-noremap <C-Down> <C-w>j
-inoremap <C-Left> <Esc><C-w>h
-inoremap <C-Right> <Esc><C-w>l
-inoremap <C-Up> <Esc><C-w>k
-inoremap <C-Down> <Esc><C-w>j
+noremap <A-Left> <C-w>h
+noremap <A-Right> <C-w>l
+noremap <A-Up> <C-w>k
+noremap <A-Down> <C-w>j
+inoremap <A-Left> <Esc><C-w>h
+inoremap <A-Right> <Esc><C-w>l
+inoremap <A-Up> <Esc><C-w>k
+inoremap <A-Down> <Esc><C-w>j
 
 " utils
 noremap <F2> :NERDTreeToggle<CR>
@@ -60,9 +60,12 @@ endif
 " easy mappings
 let mapleader=","
 " Open new file in vertical split
-nmap <leader>o :Vexplore<CR> 
+nmap <leader>o :Vexplore!<CR>
 " Open new file in horizontal split
-nmap <leader>h :Hexplore<CR> 
+nmap <leader>h :Hexplore<CR>
 " Edit and source .vimrc
 nmap <leader>ev :edit $MYVIMRC<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
+" Change buffers
+nmap <leader>. :bnext<CR>
+nmap <leader>, :bprevious<CR>
