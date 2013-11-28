@@ -70,3 +70,4 @@ nmap <leader>sv :source $MYVIMRC<CR>
 " Change buffers
 nmap <leader>. :bnext<CR>
 nmap <leader>, :bprevious<CR>
+nmap <leader>- :bwipeout<CR>
