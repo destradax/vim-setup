@@ -2,6 +2,7 @@ if has("gui_running")
 	language messages en 
 	set guifont=Consolas:h9:cANSI
 	set langmenu=en_US.UTF-8
+	set guioptions-=T
 endif
 
 " options
@@ -28,6 +29,14 @@ inoremap <A-Left> <Esc><C-w>h
 inoremap <A-Right> <Esc><C-w>l
 inoremap <A-Up> <Esc><C-w>k
 inoremap <A-Down> <Esc><C-w>j
+
+" move lines
+nnoremap <C-Up> :m .-2<CR>==
+nnoremap <C-Down> :m .+1<CR>==
+inoremap <C-Up> <Esc>:m .-2<CR>==i
+inoremap <C-Down> <Esc>:m .+1<CR>==i
+vnoremap <C-Up> :m '<-2<CR>gv=gv
+vnoremap <C-Down> :m '>+1<CR>gv=gv
 
 " utils
 noremap <F2> :NERDTreeToggle<CR>
