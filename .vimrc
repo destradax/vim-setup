@@ -3,6 +3,7 @@ if has("gui_running")
 	set guifont=Consolas:h9:cANSI
 	set langmenu=en_US.UTF-8
 	set guioptions-=T
+	colorscheme desert
 endif
 
 " options
@@ -43,6 +44,9 @@ noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :buffers<CR>:buffer<Space>
 noremap <F4> :sh<CR>
 
+" run current file
+nnoremap <F5> :!@%<CR>
+
 " easy find and open file (use <Tab> to cycle)
 noremap <C-c><C-f> :e **/
 inoremap <C-c><C-f> <Esc>:e **/
@@ -61,7 +65,6 @@ inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
 
-" reload .vimrc automatically
 if has("autocmd")
 	autocmd BufNewFile,BufRead *.md set ft=markdown
 	autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
