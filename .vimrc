@@ -4,6 +4,10 @@ if has("gui_running")
 	set langmenu=en_US.UTF-8
 	set guioptions-=T
 	colorscheme desert
+	
+	" easy copy-paste
+	vnoremap <C-c> "+y
+	inoremap <C-v> <Esc>"+pa
 endif
 
 " options
@@ -65,6 +69,9 @@ inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
 
+" autocomplete
+inoremap <C-Space> <C-x><C-o>
+
 if has("autocmd")
 	autocmd BufNewFile,BufRead *.md set ft=markdown
 	autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
@@ -72,13 +79,16 @@ endif
 
 " easy mappings
 let mapleader=","
+
 " Open new file in vertical split
 nmap <leader>o :Vexplore!<CR>
 " Open new file in horizontal split
 nmap <leader>h :Hexplore<CR>
+
 " Edit and source .vimrc
 nmap <leader>ev :edit $MYVIMRC<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
+
 " Change buffers
 nmap <leader>. :bnext<CR>
 nmap <leader>, :bprevious<CR>
