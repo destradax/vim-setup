@@ -62,12 +62,17 @@ vnoremap ( <Esc>`<i(<Esc>`>a)<Esc>
 vnoremap { <Esc>`<i{<Esc>`>a}<Esc>
 vnoremap [ <Esc>`<i[<Esc>`>a]<Esc>
 
-" edition
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
+" auto-closing characters
+inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
+inoremap ( ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap { {}<Left>
+inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+inoremap [ []<Left>
+inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap < <><Left>
+inoremap <expr> > strpart(getline('.'), col('.')-1, 1)
 
 " autocomplete
 inoremap <C-Space> <C-x><C-o>
