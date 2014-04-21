@@ -26,25 +26,24 @@ set smartcase
 set incsearch
 
 " window movement
-noremap <A-Left> <C-w>h
-noremap <A-Right> <C-w>l
-noremap <A-Up> <C-w>k
-noremap <A-Down> <C-w>j
-inoremap <A-Left> <Esc><C-w>h
-inoremap <A-Right> <Esc><C-w>l
-inoremap <A-Up> <Esc><C-w>k
-inoremap <A-Down> <Esc><C-w>j
+noremap <C-Left> <C-w>h
+noremap <C-Right> <C-w>l
+noremap <C-Up> <C-w>k
+noremap <C-Down> <C-w>j
+inoremap <C-Left> <Esc><C-w>h
+inoremap <C-Right> <Esc><C-w>l
+inoremap <C-Up> <Esc><C-w>k
+inoremap <C-Down> <Esc><C-w>j
 
 " move lines
-nnoremap <C-Up> :m .-2<CR>==
-nnoremap <C-Down> :m .+1<CR>==
-inoremap <C-Up> <Esc>:m .-2<CR>==i
-inoremap <C-Down> <Esc>:m .+1<CR>==i
-vnoremap <C-Up> :m '<-2<CR>gv=gv
-vnoremap <C-Down> :m '>+1<CR>gv=gv
+nnoremap <A-Up> :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+inoremap <A-Up> <Esc>:m .-2<CR>==i
+inoremap <A-Down> <Esc>:m .+1<CR>==i
+vnoremap <A-Up> :m '<-2<CR>gv=gv
+vnoremap <A-Down> :m '>+1<CR>gv=gv
 
 " utils
-noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :buffers<CR>:buffer<Space>
 noremap <F4> :sh<CR>
 
@@ -54,6 +53,10 @@ nnoremap <F5> :!@%<CR>
 " easy find and open file (use <Tab> to cycle)
 noremap <C-c><C-f> :e **/
 inoremap <C-c><C-f> <Esc>:e **/
+
+" tab management
+noremap <leader>t :tabedit .<cr>
+noremap <leader>w :tabclose<cr>
 
 " surround
 vnoremap ' <Esc>`<i'<Esc>`>a'<Esc>
@@ -86,9 +89,9 @@ endif
 let mapleader=","
 
 " Open new file in vertical split
-nmap <leader>o :Vexplore!<CR>
+nmap <leader>o :Vexplore! .<CR>
 " Open new file in horizontal split
-nmap <leader>h :Hexplore<CR>
+nmap <leader>h :Hexplore .<CR>
 
 " Edit and source .vimrc
 nmap <leader>ev :edit $MYVIMRC<CR>
