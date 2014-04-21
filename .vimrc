@@ -75,7 +75,7 @@ inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}
 inoremap [ []<Left>
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap < <><Left>
-inoremap <expr> > strpart(getline('.'), col('.')-1, 1)
+inoremap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 
 " autocomplete
 inoremap <C-Space> <C-x><C-o>
