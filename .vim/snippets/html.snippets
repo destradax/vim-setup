@@ -33,26 +33,42 @@ snippet body
 	<body>
 		${1}
 	</body>
-
+#
+#
 # table
 snippet table
 	<table>
-		<tr>
-			<th>${1}</th>
-		</tr>
-		<tr>
-			<td>${2}</td>
-		</tr>
+		<thead>
+			<tr>
+				<th>${1}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+		</tbody>
 	</table>
+snippet thead
+	<thead>
+		${1}
+	</thead>
+snippet tbody
+	<tbody>
+		${1}
+	</tbody>
 snippet td
 	<td>${1}</td>
 snippet tr
-	<tr>${1}</tr>
+	<tr>
+		${1}
+	</tr>
 snippet th
 	<th>${1}</th>
 snippet caption
 	<caption>${1}</caption>
-
+#
+#
 # form
 snippet form
 	<form action="${1}" method="${2}">
@@ -77,22 +93,32 @@ snippet check
 	<input type="checkbox" name="${1}" value="" />
 snippet submit
 	<input type="submit" value="${1}" />
-
+#
+#
 # lists
 snippet ul
+	<ul>
+		<li>${1}</li>
+	</ul>
+snippet ulc
 	<ul class="${1}">
 		<li>${2}</li>
 	</ul>
 snippet ol
+	<ol>
+		<li>${1}</li>
+	</ol>
+snippet olc
 	<ol class="${1}">
 		<li>${2}</li>
 	</ol>
 snippet li
 	<li>${1}</li>
-
+#
+#
 # inline
 snippet span
-	<span class="${1}">${2}</span>
+	<span>${1}</span>
 snippet em
 	<em>${1}</em>
 snippet cite
@@ -106,13 +132,22 @@ snippet anch
 snippet a
 	<a href="${1}">	</a>
 snippet thumb
-	<a href="${1}"><img src="" /></a>
-
+	<a href="${1}"><img src="{$2}" /></a>
+#
+#
 # block
 snippet div
-	<div class="${1}">${2}</div>
+	<div>
+		{$1}
+	</div>
+snippet divc
+	<div class="${1}">
+		${2}
+	</div>
 snippet divi
-	<div id="${1}">${2}</div>
+	<div id="${1}">
+		${2}
+	</div>
 snippet h1
 	<h1>${1}</h1>
 snippet h2
@@ -139,7 +174,8 @@ snippet quote
 			${1}
 		</p>
 	</blockquote>
-
+#
+#
 # other
 snippet br
 	<br />
@@ -151,5 +187,3 @@ snippet 3s
 	&nbsp;&nbsp;&nbsp;
 snippet 7s
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
