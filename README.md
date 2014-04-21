@@ -1,8 +1,10 @@
 vim-setup
 =========
 
-Quick install:
+My personal vim setup.
 
-    git clone git@github.com:destradax/vim-setup.git
-		cd vim-setup
-    ./install.sh
+Linux install:
+
+	git clone git@github.com:destradax/vim-setup.git
+	cd vim-setup
+	cp .vimrc ~/
