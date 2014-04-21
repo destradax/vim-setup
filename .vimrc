@@ -3,7 +3,6 @@ if has("gui_running")
 	set guifont=Consolas:h9:cANSI
 	set langmenu=en_US.UTF-8
 	set guioptions-=T
-	colorscheme desert
 	
 	" easy copy-paste
 	vnoremap <C-c> "+y
@@ -12,6 +11,7 @@ endif
 
 " options
 syntax on
+colorscheme desert
 filetype plugin on
 set enc=utf-8
 set mouse=a
